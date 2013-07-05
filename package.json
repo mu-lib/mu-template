@@ -1,0 +1,31 @@
+{
+	"name": "mu-template",
+	"description": "Micro template",
+	"version": "1.0.0-SNAPSHOT",
+	"homepage": "https://github.com/mikaelkaron/mu-template",
+	"author": {
+		"name": "Mikael Karon",
+		"email": "mikael@karon.se"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mikaelkaron/mu-template"
+	},
+	"bugs": {
+		"url": "https://github.com/mikaelkaron/mu-template/issues"
+	},
+	"licenses": [
+		{
+		  "type": "MIT",
+		  "url": "http://mikael.mit-license.org"
+		}
+	],
+	"main": "Gruntfile.js",
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"devDependencies": {
+		"grunt-contrib-jshint": "~0.1.1",
+		"grunt": "~0.4.0rc7"
+	}
+}
