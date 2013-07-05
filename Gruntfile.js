@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 		},
 
 		"git-dist" : {
-			"bundles" : {
+			"all" : {
 				"options" : {
 					"branch" : "dist",
 					"dir" : "<%= build.dist %>",
@@ -99,6 +99,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-git-describe");
 	grunt.loadNpmTasks("grunt-git-dist");
 	grunt.loadNpmTasks("grunt-json-replace");
-	grunt.registerTask("dist", [ "copy", "git-describe", "json-replace" ]);
+	grunt.registerTask("dist", [ "git-dist:*:clone", "copy", "git-describe", "json-replace", "git-dist:*:commit", "git-dist:*:push" ]);
 	grunt.registerTask("default", [ "jshint" ]);
 };
