@@ -1,7 +1,7 @@
 {
 	"name": "mu-template",
 	"description": "Micro template",
-	"version": "1.0.1-SNAPSHOT",
+	"version": "1.0.1",
 	"homepage": "https://github.com/mikaelkaron/mu-template",
 	"author": {
 		"name": "Mikael Karon",
