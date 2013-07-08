@@ -1,7 +1,7 @@
 {
 	"name": "mu-template",
 	"description": "Micro template",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"homepage": "https://github.com/mikaelkaron/mu-template",
 	"author": {
 		"name": "Mikael Karon",
@@ -20,6 +20,7 @@
 		  "url": "http://mikael.mit-license.org"
 		}
 	],
+	"main" : "main.js",
 	"devDependencies": {
 		"grunt-contrib-jshint": "~0.6.0",
 		"grunt-contrib-copy" : "~0.4.1",

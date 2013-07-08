@@ -2,7 +2,7 @@
  * µTemplate
  * @license MIT http://mikael.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
-define(function () {
+(function (define) { define(function () {
 	"use strict";
 
 	var EMPTY = "";
@@ -43,7 +43,7 @@ define(function () {
 			return REPLACE[token] || token;
 		}
 
-		return ("function template(data) { var o = \""
+		body = ("var o = \""
 			// Sanitize body before we start templating
 			+ body.replace(re_sanitize, "")
 
@@ -56,9 +56,12 @@ define(function () {
 			// Replace tokens with script blocks
 			.replace(re_tokens, tokensBlocks)
 
-			+ "\"; return o; }")
+			+ "\"; return o;")
 
 			// Clean
 			.replace(re_clean, EMPTY);
+
+		// Return compiled template
+		return Function("data", body);
 	};
-});
+}); })(typeof define === "function" && define.amd ? define : function (factory) { module.exports = factory(); });
