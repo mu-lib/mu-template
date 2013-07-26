@@ -1,7 +1,7 @@
 {
 	"name": "mu-template",
 	"description": "Micro template",
-	"version": "1.0.2-SNAPSHOT",
+	"version": "1.0.2",
 	"homepage": "https://github.com/mikaelkaron/mu-template",
 	"author": {
 		"name": "Mikael Karon",
@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"grunt-contrib-jshint": "~0.6.0",
 		"grunt-contrib-copy" : "~0.4.1",
-		"grunt-contrib-clean" : "~0.4.1",
+		"grunt-contrib-clean" : "~0.5.0",
 		"grunt-git-describe" : "~2.0.2",
 		"grunt-git-dist" : "~0.3.0",
 		"grunt-json-replace" : "~0.1.2",
