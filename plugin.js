@@ -1,5 +1,5 @@
 /**
- * µTemplate amd plugin loader loader
+ * µTemplate amd plugin loader
  * @license MIT http://mikael.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
 define([ "text", "./main" ], function (text, compiler) {
@@ -7,9 +7,9 @@ define([ "text", "./main" ], function (text, compiler) {
 
 	return {
 		"load": function (name, req, load) {
-			text.get(req.toUrl(name), function (value) {
-				load.fromText(name, compiler(value));
-			});
+			text.get(req.toUrl(name), function (source) {
+				load(compiler(source));
+			}, load.error);
 		}
 	};
 });
