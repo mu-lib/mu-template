@@ -41,7 +41,7 @@ module.exports = function(grunt) {
 					"expand" : true,
 					"cwd" : "<%= build.src %>",
 					"dest" : "<%= build.dist %>",
-					"src" : [ "main.js", "bower.json", "package.json" ]
+					"src" : [ "bower.json", "package.json", "main.js", "plugin.js" ]
 				}]
 			}
 		},
