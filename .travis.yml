@@ -1,4 +1,4 @@
 language: node_js
 before_script:
-  - npm install -g grunt-cli bower
+  - npm install -g grunt-cli bower buster
   - bower install

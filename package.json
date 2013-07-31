@@ -34,7 +34,6 @@
 		"grunt-buster": "~0.2",
 		"grunt": "~0.4",
 
-		"buster": "~0.6",
 		"temp": "~0.5",
 		"requirejs": "~2.1"
 	}
