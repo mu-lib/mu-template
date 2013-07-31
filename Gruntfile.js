@@ -93,6 +93,10 @@ module.exports = function(grunt) {
 					}
 				}
 			}
+		},
+
+		"buster" : {
+			"all": {}
 		}
 	});
 
@@ -102,6 +106,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-git-describe");
 	grunt.loadNpmTasks("grunt-git-dist");
 	grunt.loadNpmTasks("grunt-json-replace");
+	grunt.loadNpmTasks("grunt-buster");
+	grunt.registerTask("test", [ "buster" ]);
 	grunt.registerTask("dist", [ "clean", "git-dist:*:clone", "copy", "git-describe", "json-replace", "git-dist:*:commit", "git-dist:*:push" ]);
-	grunt.registerTask("default", [ "jshint" ]);
 };
