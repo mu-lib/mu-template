@@ -1,9 +1,9 @@
+var buster = require("buster");
+var assert = buster.assertions.assert;
+
 var fs = require("fs");
 var temp = require("temp");
 var requirejs = require("requirejs");
-
-var buster = require("buster");
-var assert = buster.assertions.assert;
 
 buster.testCase("plugin", {
 	"load": function (done) {
