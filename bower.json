@@ -1,6 +1,6 @@
 {
   "name": "mu-template",
-  "version": "1.0.3",
+  "version": "1.0.4-SNAPSHOT",
   "dependencies": {
     "text": "https://github.com/requirejs/text.git#~2.0"
   },
