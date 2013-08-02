@@ -31,7 +31,7 @@ define([ "text", "./main" ], function (text, compiler) {
 
 		"write": function (pluginName, moduleName, write) {
 			if (moduleName in buildMap) {
-				write("define('" + pluginName + "!" + moduleName  + "', function () { return '" + buildMap[moduleName].toString() + "';});\n");
+				write.asModule(pluginName + "!" + moduleName, "define(function () { return "  + buildMap[moduleName].toString() + "});");
 			}
 		}
 	};
