@@ -6,15 +6,18 @@ define([ "text", "./main" ], function (text, compiler) {
 	"use strict";
 
 	var UNDEFINED;
+	var EMPTY = /^empty:/;
 	var buildMap = {};
 
 	return {
 		"load": function (name, req, load, config) {
-			if (name === "empty:") {
+			var url = req.toUrl(name);
+
+			if (EMPTY.test(url)) {
 				load(UNDEFINED);
 			}
 			else {
-				text.get(req.toUrl(name), function (source) {
+				text.get(url, function (source) {
 					var compiled = compiler(source);
 
 					if (config.isBuild) {
