@@ -17,7 +17,7 @@ config["browser"] = {
 	"rootPath": "../",
 
 	"libs": [
-		"test/require.js",
+		"fixtures/require.js",
 		"bower_components/requirejs/require.js"
 	],
 
