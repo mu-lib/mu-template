@@ -8,9 +8,11 @@ buster.testCase("plugin", function (run) {
 	var requirejs = require("requirejs");
 
 	run({
-		"load test.html": function (done) {
+		"setUp": function () {
 			this.timeout = 1000;
+		},
 
+		"load test.html": function (done) {
 			requirejs.config({
 				"baseUrl": "./",
 				"packages": [{
@@ -29,8 +31,6 @@ buster.testCase("plugin", function (run) {
 		},
 
 		"load empty:": function (done) {
-			this.timeout = 1000;
-
 			requirejs.config({
 				"baseUrl": "./",
 				"packages": [{
@@ -49,8 +49,6 @@ buster.testCase("plugin", function (run) {
 		},
 
 		"write test.html": function (done) {
-			this.timeout = 1000;
-
 			temp.open("requirejs", function (err, info) {
 				if (err) {
 					done(err);
@@ -87,8 +85,6 @@ var o = \"THIS IS A [\" + data.test + \"] TEST\"; return o;\n\
 		},
 
 		"write empty:": function (done) {
-			this.timeout = 1000;
-
 			temp.open("requirejs", function (err, info) {
 				if (err) {
 					done(err);
