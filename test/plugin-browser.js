@@ -12,6 +12,13 @@ buster.testCase("plugin", function (run){
 				done(true);
 			}, done);
 		},
+		"load expression.html": function (done) {
+			require([ "plugin!fixtures/expression.html" ], function (data) {
+				assert.equals(data({"checked": true }), "foo checked bar");
+
+				done(true);
+			}, done);
+		},
 		"load empty:": function (done) {
 			require([ "plugin!empty:" ], function (data) {
 				refute.defined(data);
