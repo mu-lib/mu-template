@@ -74,7 +74,7 @@ buster.testCase("plugin", function (run) {
 
 						assert.equals(data, "\n\
 define('plugin!fixtures/test.html',[],function () {return function anonymous(data) {\n\
-var o = \"THIS IS A [\" + data.test + \"] TEST\"; return o;\n\
+var o = \"THIS IS A [\" + ( data.test ) + \"] TEST\"; return o;\n\
 }});\
 ");
 
