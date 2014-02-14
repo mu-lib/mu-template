@@ -1,7 +1,7 @@
 {
 	"name": "mu-template",
 	"description": "Micro template",
-	"version": "1.0.4-SNAPSHOT",
+	"version": "1.0.4",
 	"homepage": "https://github.com/mikaelkaron/mu-template",
 	"author": {
 		"name": "Mikael Karon",
@@ -16,24 +16,24 @@
 	},
 	"licenses": [
 		{
-		  "type": "MIT",
-		  "url": "http://mikael.mit-license.org"
+			"type": "MIT",
+			"url": "http://mikael.mit-license.org"
 		}
 	],
-	"main" : "main.js",
-	"scripts" : {
-		"postinstall" : "bower install",
-		"test" : "grunt test"
+	"main": "main.js",
+	"scripts": {
+		"postinstall": "bower install",
+		"test": "grunt test"
 	},
 	"devDependencies": {
 		"grunt": "~0.4",
 		"grunt-cli": "~0.1",
 		"grunt-contrib-jshint": "~0.6",
-		"grunt-contrib-copy" : "~0.4",
-		"grunt-contrib-clean" : "~0.4",
-		"grunt-git-describe" : "~2",
-		"grunt-git-dist" : "~0.3",
-		"grunt-json-replace" : "~0.1",
+		"grunt-contrib-copy": "~0.4",
+		"grunt-contrib-clean": "~0.4",
+		"grunt-git-describe": "~2",
+		"grunt-git-dist": "~0.3",
+		"grunt-json-replace": "~0.1",
 		"grunt-buster": "~0.2",
 		"bower": "~1",
 		"buster": "~0.6",
