@@ -30,7 +30,7 @@
 
 		function blocksTokens(original, prefix, block) {
 			blocks[length] = prefix
-				? "\" +" + block + "+ \""
+				? "\" + (" + block + ") + \""
 				: "\";" + block + "o += \"";
 			return "<%" + String(length++) + "%>";
 		}
