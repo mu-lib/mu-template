@@ -5,6 +5,10 @@ buster.testCase("plugin", function (run){
 	var refute = buster.referee.refute;
 
 	run({
+		"setUp": function () {
+			this.timeout = 1000;
+		},
+
 		"load test.html": function (done) {
 			require([ "plugin!fixtures/test.html" ], function (data) {
 				assert.equals(data({ "test" : 123 }), "THIS IS A [123] TEST");
