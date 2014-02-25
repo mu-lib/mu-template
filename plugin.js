@@ -5,25 +5,33 @@
 define([ "text", "./main" ], function (text, compiler) {
 	"use strict";
 
+	var UNDEFINED;
+	var EMPTY = /^empty:/;
 	var buildMap = {};
 
 	return {
 		"load": function (name, req, load, config) {
-			text.get(req.toUrl(name), function (source) {
-				var compiled = compiler(source);
+			var url = req.toUrl(name);
 
-				if (config.isBuild) {
-					buildMap[name] = compiled;
-				}
+			if (EMPTY.test(url)) {
+				load(UNDEFINED);
+			}
+			else {
+				text.get(url, function (source) {
+					var compiled = compiler(source);
 
-				load(compiled);
-			}, load.error);
+					if (config.isBuild) {
+						buildMap[name] = compiled;
+					}
+
+					load(compiled);
+				}, load.error);
+			}
 		},
 
 		"write": function (pluginName, moduleName, write) {
 			if (moduleName in buildMap) {
-				write("define('" + pluginName + "!" + moduleName  +
-					"', function () { return '" + buildMap[moduleName].toString() + "';});\n");
+				write.asModule(pluginName + "!" + moduleName, "define(function () {return "  + buildMap[moduleName].toString() + "});");
 			}
 		}
 	};
