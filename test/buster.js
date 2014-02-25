@@ -24,7 +24,7 @@ config["browser"] = {
 	"resources": [
 		"fixtures/**/*.*",
 		"bower_components/requirejs/require.js",
-		"bower_components/text/text.js",
+		"bower_components/requirejs-text/text.js",
 		"main.js",
 		"plugin.js"
 	],

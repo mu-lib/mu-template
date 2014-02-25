@@ -1,8 +1,8 @@
 buster.testCase("plugin", function (run){
 	"use strict";
 
-	var assert = buster.assertions.assert;
-	var refute = buster.assertions.refute;
+	var assert = buster.referee.assert;
+	var refute = buster.referee.refute;
 
 	run({
 		"load test.html": function (done) {

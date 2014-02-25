@@ -1,6 +1,7 @@
+"use strict";
 var buster = require("buster");
-var assert = buster.assertions.assert;
-var refute = buster.assertions.refute;
+var assert = buster.referee.assert;
+var refute = buster.referee.refute;
 
 buster.testCase("plugin", function (run) {
 	var fs = require("fs");
@@ -17,7 +18,7 @@ buster.testCase("plugin", function (run) {
 				"baseUrl": "./",
 				"packages": [{
 					"name" : "text",
-					"location": "bower_components/text",
+					"location": "bower_components/requirejs-text",
 					"main": "text"
 				}],
 				"deps" : [ "plugin!fixtures/test.html" ],
@@ -35,7 +36,7 @@ buster.testCase("plugin", function (run) {
 				"baseUrl": "./",
 				"packages": [{
 					"name" : "text",
-					"location": "bower_components/text",
+					"location": "bower_components/requirejs-text",
 					"main": "text"
 				}],
 				"deps" : [ "plugin!empty:" ],
@@ -58,7 +59,7 @@ buster.testCase("plugin", function (run) {
 					"optimize": "none",
 					"packages": [{
 						"name" : "text",
-						"location": "bower_components/text",
+						"location": "bower_components/requirejs-text",
 						"main": "text"
 					}],
 					"out": info.path,
@@ -94,7 +95,7 @@ var o = \"THIS IS A [\" + ( data.test ) + \"] TEST\"; return o;\n\
 					"optimize": "none",
 					"packages": [{
 						"name" : "text",
-						"location": "bower_components/text",
+						"location": "bower_components/requirejs-text",
 						"main": "text"
 					}],
 					"out": info.path,
