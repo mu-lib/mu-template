@@ -1,18 +1,18 @@
 {
 	"name": "mu-template",
+	"version": "1.0.6-develop",
 	"description": "Micro template",
-	"version": "1.0.5",
-	"homepage": "https://github.com/mikaelkaron/mu-template",
+	"homepage": "https://github.com/mu-lib/mu-template",
 	"author": {
 		"name": "Mikael Karon",
 		"email": "mikael@karon.se"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/mikaelkaron/mu-template"
+		"url": "https://github.com/mu-lib/mu-template"
 	},
 	"bugs": {
-		"url": "https://github.com/mikaelkaron/mu-template/issues"
+		"url": "https://github.com/mu-lib/mu-template/issues"
 	},
 	"licenses": [
 		{
@@ -28,16 +28,11 @@
 	"devDependencies": {
 		"grunt": "~0.4",
 		"grunt-cli": "~0.1",
-		"grunt-contrib-jshint": "~0.8",
-		"grunt-contrib-copy": "~0.5",
-		"grunt-contrib-clean": "~0.4",
-		"grunt-git-describe": "~2",
-		"grunt-git-dist": "~0.4",
-		"grunt-json-replace": "~0.1",
+		"grunt-contrib-jshint": "~0.10",
 		"grunt-buster": "~0.3",
 		"bower": "~1",
 		"buster": "~0.7",
-		"temp": "~0.6",
+		"temp": "~0.8",
 		"requirejs": "~2.1"
 	}
 }
