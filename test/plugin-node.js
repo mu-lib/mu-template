@@ -17,14 +17,17 @@ buster.testCase("plugin", function (run) {
 			requirejs.config({
 				"baseUrl": "./",
 				"packages": [{
-					"name" : "text",
+					"name": "text",
 					"location": "bower_components/requirejs-text",
 					"main": "text"
 				}],
-				"deps" : [ "plugin!fixtures/test.html" ],
+				"paths": {
+					"plugin": "requirejs"
+				},
+				"deps": ["plugin!fixtures/test.html"],
 				"callback": function (data) {
 
-					assert.equals(data({ "test" : 123 }), "THIS IS A [123] TEST");
+					assert.equals(data({ "test": 123 }), "THIS IS A [123] TEST");
 
 					done(true);
 				}
@@ -35,11 +38,14 @@ buster.testCase("plugin", function (run) {
 			requirejs.config({
 				"baseUrl": "./",
 				"packages": [{
-					"name" : "text",
+					"name": "text",
 					"location": "bower_components/requirejs-text",
 					"main": "text"
 				}],
-				"deps" : [ "plugin!empty:" ],
+				"paths": {
+					"plugin": "requirejs"
+				},
+				"deps": ["plugin!empty:"],
 				"callback": function (data) {
 
 					refute.defined(data);
@@ -58,13 +64,16 @@ buster.testCase("plugin", function (run) {
 				requirejs.optimize({
 					"optimize": "none",
 					"packages": [{
-						"name" : "text",
+						"name": "text",
 						"location": "bower_components/requirejs-text",
 						"main": "text"
 					}],
+					"paths": {
+						"plugin": "requirejs"
+					},
 					"out": info.path,
 					"name": "plugin!fixtures/test.html",
-					"exclude": [ "plugin" ]
+					"exclude": ["plugin"]
 				}, function (output) {
 					fs.readFile(info.path, {
 						"encoding": "utf8"
@@ -78,7 +87,6 @@ define('plugin!fixtures/test.html',[],function () {return function anonymous(dat
 var o = \"THIS IS A [\" + ( data.test ) + \"] TEST\"; return o;\n\
 }});\
 ");
-
 						done(true);
 					});
 				});
@@ -94,13 +102,16 @@ var o = \"THIS IS A [\" + ( data.test ) + \"] TEST\"; return o;\n\
 				requirejs.optimize({
 					"optimize": "none",
 					"packages": [{
-						"name" : "text",
+						"name": "text",
 						"location": "bower_components/requirejs-text",
 						"main": "text"
 					}],
+					"paths": {
+						"plugin": "requirejs"
+					},
 					"out": info.path,
 					"name": "plugin!empty:",
-					"exclude": [ "plugin" ]
+					"exclude": ["plugin"]
 				}, function (output) {
 					fs.readFile(info.path, {
 						"encoding": "utf8"

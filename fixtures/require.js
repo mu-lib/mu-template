@@ -3,5 +3,8 @@ var require = {
 		"name" : "text",
 		"location" : "bower_components/requirejs-text",
 		"main" : "text"
-	}]
+	}],
+	"paths": {
+		"plugin": "requirejs"
+	}
 };

@@ -22,14 +22,13 @@
 	],
 	"main": "main.js",
 	"scripts": {
-		"postinstall": "bower install",
 		"test": "grunt test"
 	},
 	"devDependencies": {
-		"grunt": "~0.4",
-		"grunt-cli": "~0.1",
-		"grunt-contrib-jshint": "~0.10",
-		"grunt-buster": "~0.3",
+		"grunt": "^1.0.1",
+		"grunt-cli": "^1.2.0",
+		"grunt-contrib-jshint": "1.1.0",
+		"grunt-buster": "^0.4.2",
 		"bower": "~1",
 		"buster": "~0.7",
 		"temp": "~0.8",

@@ -26,7 +26,7 @@ config["browser"] = {
 		"bower_components/requirejs/require.js",
 		"bower_components/requirejs-text/text.js",
 		"main.js",
-		"plugin.js"
+		"requirejs.js"
 	],
 
 	"tests": [
