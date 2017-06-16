@@ -1,39 +1,39 @@
 {
-	"name": "mu-template",
-	"version": "1.0.7",
-	"description": "Micro template",
-	"homepage": "https://github.com/mu-lib/mu-template",
-	"author": {
-		"name": "Mikael Karon",
-		"email": "mikael@karon.se"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/mu-lib/mu-template"
-	},
-	"bugs": {
-		"url": "https://github.com/mu-lib/mu-template/issues"
-	},
-	"licenses": [
-		{
-			"type": "MIT",
-			"url": "http://mikael.mit-license.org"
-		}
-	],
-	"main": "main.js",
-	"scripts": {
-		"test": "grunt test",
-		"release": "standard-version"
-	},
-	"devDependencies": {
-		"bower": "~1",
-		"buster": "~0.7",
-		"grunt": "^1.0.1",
-		"grunt-buster": "^0.4.2",
-		"grunt-cli": "^1.2.0",
-		"grunt-contrib-jshint": "1.1.0",
-		"requirejs": "~2.1",
-		"standard-version": "^4.0.0",
-		"temp": "~0.8"
-	}
+  "name": "mu-template",
+  "version": "1.0.8",
+  "description": "Micro template",
+  "homepage": "https://github.com/mu-lib/mu-template",
+  "author": {
+    "name": "Mikael Karon",
+    "email": "mikael@karon.se"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mu-lib/mu-template"
+  },
+  "bugs": {
+    "url": "https://github.com/mu-lib/mu-template/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://mikael.mit-license.org"
+    }
+  ],
+  "main": "main.js",
+  "scripts": {
+    "test": "grunt test",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "bower": "~1",
+    "buster": "~0.7",
+    "grunt": "^1.0.1",
+    "grunt-buster": "^0.4.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-jshint": "1.1.0",
+    "requirejs": "~2.1",
+    "standard-version": "^4.0.0",
+    "temp": "~0.8"
+  }
 }
