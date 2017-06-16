@@ -2,16 +2,21 @@
  * µTemplate
  * @license MIT http://mikael.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
-(function (define) {
-	"use strict";
-	define(function () {
-
+(function (root, factory) {
+	if (typeof define === "function" && define.amd) {
+		define([], factory);
+	} else if (typeof module === "object" && module.exports) {
+		module.exports = factory();
+	} else {
+		root["mu-template/main"] = factory();
+	}
+})(this, function () {
 	var EMPTY = "";
 	var REPLACE = {
-		"\"" : "\\\"",
-		"\n" : "\\n",
-		"\t" : "\\t",
-		"\r" : "\\r"
+		"\"": "\\\"",
+		"\n": "\\n",
+		"\t": "\\t",
+		"\r": "\\r"
 	};
 
 	/**
@@ -48,14 +53,14 @@
 			// Sanitize body before we start templating
 			+ body.replace(re_sanitize, "")
 
-			// Replace script blocks with tokens
-			.replace(re_blocks, blocksTokens)
+				// Replace script blocks with tokens
+				.replace(re_blocks, blocksTokens)
 
-			// Replace unwanted tokens
-			.replace(re_replace, replace)
+				// Replace unwanted tokens
+				.replace(re_replace, replace)
 
-			// Replace tokens with script blocks
-			.replace(re_tokens, tokensBlocks)
+				// Replace tokens with script blocks
+				.replace(re_tokens, tokensBlocks)
 
 			+ "\"; return o;")
 
@@ -65,4 +70,4 @@
 		// Return compiled template
 		return Function("data", body);
 	};
-}); })(typeof define === "function" && define.amd ? define : function (factory) { "use strict"; module.exports = factory(); });
+});

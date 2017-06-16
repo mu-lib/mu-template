@@ -1,5 +1,5 @@
 /**
- * µTemplate amd plugin loader
+ * µTemplate RequireJS plugin loader
  * @license MIT http://mikael.mit-license.org/ © Mikael Karon mailto:mikael@karon.se
  */
 define([ "text", "./main" ], function (text, compiler) {
