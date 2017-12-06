@@ -1,7 +1,6 @@
 # µ Template
 
 - [source](main.js)
-- [tests](tests)
 - [changelog](CHANGELOG.md)
 
 ## Installation
